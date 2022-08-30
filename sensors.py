@@ -3,23 +3,23 @@ import time
 import grovepi
 import math
 
-GPIO.setmode(GPIO.BOARD)
+#GPIO.setmode(GPIO.BOARD)
 
-#moisture_sensor = 0
-temphum_sensor = 5
+moisture_sensor = 0
+#temphum_sensor = 5
 #light_sensor = 2
 print("imports")
 
 try:
     #def getSensor():
-    print("b4 temp hum")
-    [temp,hum] = grovepi.dht(temphum_sensor, 0)
-    print("temp =", temp, "C\thumidity =", hum,"%")
-    print("after temp hum")
+    #print("b4 temp hum")
+    #[temp,hum] = grovepi.dht(temphum_sensor, 0)
+    #print("temp =", temp, "C\thumidity =", hum,"%")
+    #print("after temp hum")
 
-    #print("b4 analog read")
-    #moisture = grovepi.analogRead(moisture_sensor)
-    #print("after analog read")
+    print("b4 analog read")
+    moisture = grovepi.analogRead(moisture_sensor)
+    print("after analog read")
     #temperature = grovepi.analogRead(temphum_sensor)
     #light = grovepi.analogRead(light_sensor)
 
