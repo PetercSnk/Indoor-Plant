@@ -3,8 +3,6 @@ import time
 from grove.grove_moisture_sensor import GroveMoistureSensor
 import math
 
-GPIO.setmode(GPIO.BOARD)
-
 moisture_sensor = 0
 #temphum_sensor = 5
 #light_sensor = 2
