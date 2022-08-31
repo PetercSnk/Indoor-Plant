@@ -1,6 +1,6 @@
 import RPi.GPIO as GPIO
 import time
-import grovepi
+from grove.grove_moisture_sensor import GroveMoistureSensor
 import math
 
 GPIO.setmode(GPIO.BOARD)
@@ -18,8 +18,7 @@ try:
     #print("after temp hum")
 
     print("b4 analog read")
-    moisture = grovepi.analogRead(moisture_sensor)
-    time.sleep(.5)
+    moisture = GroveMoistureSensor(moisture_sensor).moisture
     print(moisture)
     print("after analog read")
     #temperature = grovepi.analogRead(temphum_sensor)
